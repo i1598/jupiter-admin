@@ -19,6 +19,7 @@ class WxPost{
 textTpl;
 		$createTime = time();
 		$textMessage = sprintf($textTpl, $postObj->FromUserName, $postObj->ToUserName, $createTime, date('Y-m-d H:i:s'));
+        file_put_contents('/tmp/zxh.txt', date('r') . '--' . var_export($textMessage, true) . "\n");
         	echo $textMessage;
 		return;
 	}
