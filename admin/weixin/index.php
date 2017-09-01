@@ -32,7 +32,7 @@ textTpl;
         if($this->checkSignature()){
 	file_put_contents("/tmp/zxh.txt", date('r')."\n", FILE_APPEND);
 			if(!empty($_GET['echostr'])){
-//				echo $_GET['echostr'];exit;
+				echo $_GET['echostr'];exit;
 			}
             $this->responseMsg();
         	exit;
